@@ -11,4 +11,12 @@ public class AllButFirstLast {
 
         System.out.println(text.substring((2) - 1, text.length() - 1));
     }
+    
+    public static void allButFirstLast(String text) {
+        System.out.println(text.substring((2) - 1, text.length() - 1));
+    }
+    
+    public static String allButFirstLastString(String text) {
+        return text.substring((2) - 1, text.length() - 1);
+    }
 }
