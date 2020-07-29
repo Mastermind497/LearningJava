@@ -1,16 +1,18 @@
 package Introduction;
 
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args) {
-        String a = "Coding Class 2020";
-        System.out.println(a.indexOf("c"));
+        Scanner reader = new Scanner(System.in);
+        //System.out.print("Type something for me to copy: ");
+
+        boolean equals = "Test".equalsIgnoreCase("test");
+        System.out.println(equals);
     }
 
-    public static int size(int a, int b) {
-        return 0;
-    }
-
-    public static int size(int a) {
-        return 1;
+    public static double fahrenheitToCelsius(double fTemp) {
+        double celsius = (((fTemp - 32) * 5) / 9);
+        return celsius;
     }
 }

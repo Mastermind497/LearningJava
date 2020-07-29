@@ -22,7 +22,14 @@ public class Fruit {
         this.seedless = seedless;
         this.price = price;
         this.gmo = gmo;
-        this.ripeness = ripeness;
+
+        if (ripeness > 10) {
+            this.ripeness = 10;
+        }
+        else {
+            this.ripeness = Math.max(1, ripeness);
+        }
+
         this.weight = weight;
     }
 
@@ -82,4 +89,14 @@ public class Fruit {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
+    public String toString() {
+        return type + ", Weight = " + weight + ", Ripeness = " + ripeness;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Fruit("Apple", true, 4, true, 10, 3.5));
+    }
+
+
 }
