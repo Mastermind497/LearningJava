@@ -1,15 +1,22 @@
 package Loops;
 
+import Classes.Point;
+
 public class WhileLoops {
     /*
     One Arg: Boolean
     Block
      */
     public static void main(String[] args) {
-        int x = 0;
-        while (x < 5) {
-            System.out.println("Right now, x = " + x);
-            x = x + 1;
+        top:
+        for (int i = 0; i < 5; i++) {
+            for (int k = 0; k < 5; k++) {
+                if (i * k == 12) {
+                    break top;
+                }
+
+                System.out.println("No break because i * k = " + i + " * " + k + " = " + i * k);
+            }
         }
     }
 
